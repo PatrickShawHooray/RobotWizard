@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width" />
+   <link href="~/Scripts/notOriginal/bootstrap.min.css" rel="stylesheet" />
+   <link href="~/Content/styles/Master.css" rel="stylesheet" />
+   <script src="~/Scripts/notOriginal/jquery-2.1.4.min.js"></script>
+   <script src="~/Scripts/buttons.js"></script>
+   <script src="~/Scripts/global.js"></script>
+   <title>@ViewBag.Title</title>
+</head>
+<body>
+   <div id="header">
+      <img align="right" src="~/Content/images/logos/RoboWizLogo.png" />
+   </div>
+   <div class="container">
+      @RenderBody()
+   </div>
+   <div id="roboWizWipe">
+      <h1 id="roboWizWipeMessage"></h1>
+      <img src="~/Content/images/Earth.png" />
+   </div>
+</body>
+</html>
+
+

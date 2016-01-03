@@ -1,0 +1,16 @@
+﻿@{
+   ViewBag.Title = "Index";
+   Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+
+<div id="top3rd"></div>
+
+<div id="middle3rd">
+   <button class="btnWithImg pBtn" onclick="@("window.location.href='" + @Url.Action("ArrangePlanets", "Arrange") + "'")">
+      <img id="games" src="~/Content/buttons/games.png">
+   </button>
+</div>
+
+<div id="bottom3rd"></div>
+
+

@@ -1,0 +1,43 @@
+﻿@model RobotWizard.Models.ArrangeGame
+
+@{
+   Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+
+<script type="text/javascript" src="~/Scripts/dom-draggable.js"></script>
+<script src="~/Scripts/Arrange/ArrangeThePlanets.js"></script>
+
+<script>
+   var winResponses = @RobotWizard.JavaScriptConvert.SerializeObject(Model.winList);
+   var failResponses = @RobotWizard.JavaScriptConvert.SerializeObject(Model.failList);
+   var correctOrder = @RobotWizard.JavaScriptConvert.SerializeObject(Model.correctOrder);
+   var background = 'url("/Content/images/sun.gif")';
+   initGame();
+</script>
+
+<div id="top3rd">
+   <div class="title">
+      <h2>@Model.title</h2><h4>In order from the sun.</h4>
+   </div>
+</div>
+
+<div id="middle3rd">
+   <div class="topBuffer"></div>
+   <table id="table1">
+      <tr class="row">
+         @{int count = 0;}
+         @foreach (var obj in @Model.objects)
+         {
+            string strImgPath = "/Content/images/" + @obj.image;
+            <td class="sortItem" ondrop="drop(event)" ondragover="allowDrop(event)" id=@count>
+               <img id=@obj.name class="sortImg" onclick="suppress()" src=@Url.Content(strImgPath) draggable="true" ondragstart="drag(event)" />
+            </td>
+            ++count;
+         }
+      </tr>
+   </table>
+</div>
+
+<div id="bottom3rd" class="clearfix">
+   <button class="btn btn-primary btn-lg pull-right btnWithImg pBtn" onclick="judgement()"><img id="judge" src="~/Content/buttons/judge.png"></button>
+</div>

@@ -1,0 +1,3 @@
+correctOrder=Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune
+objects=Mercury.png,Venus.png,Earth.png,Mars.png,Jupiter.png,Saturn.png,Uranus.png,Neptune.png
+title=Arrange the Planets
