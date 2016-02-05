@@ -1,0 +1,71 @@
+﻿@{
+   Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+
+   <div id="top3rd">
+      
+   </div>
+
+   <div id="middle3rd">
+      <div class="row">
+         <span class="col-md-1"></span>
+         <span class="col-md-2"><img src="../Content/images/404Message.png" /></span>
+         <span class="col-md-9"></span>   
+      </div>
+   </div>
+
+   <div id="bottom3rd">
+      <div class="row">
+         <span class="col-md-5"></span>
+         <span><img class="col-md-2" src="../Content/robots/404.png" /></span>
+      </div>
+   </div>
+
+<audio id="wrong" src="~/Content/sounds/wrong.ogg" type="audio/ogg" />
+
+<script>
+   $("body").addClass('FourOFourBack');
+   soundFX('wrong');
+   setTimeout(function () { window.location.replace(getRandomSite()); }, 3000);
+
+
+   function getRandomSite() {
+      var rand = Math.floor((Math.random() * 10) + 1);
+      var retStr = "";
+
+      switch (rand)
+      {
+         case 1:
+            retStr = "http://www.onedirectionmusic.com/us/home/";
+            break;
+         case 2:
+            retStr = "http://heyyeyaaeyaaaeyaeyaa.com/";
+            break;
+         case 3:
+            retStr = "http://r33b.net/";
+            break;
+         case 4:
+            retStr = "http://heyokay.com/";
+            break;
+         case 5:
+            retStr = "http://www.homestarrunner.com/trogdor.html";
+            break;
+         case 6:
+            retStr = "http://procatinator.com/";
+            break;
+         case 7:
+            retStr = "http://www.nyan.cat/";
+            break;
+         case 8:
+            retStr = "http://www.zimm-co.com/PressTheSpaceBar/pressthespacebar2000.html";
+            break;
+         case 9:
+            retStr = "http://nooooooooooooooo.com/";
+            break;
+         default:
+            retStr = "http://www.hampsterdance.com/classics/originaldance.htm";
+      }
+      
+      return retStr;
+   }
+</script>

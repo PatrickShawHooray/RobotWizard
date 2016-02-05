@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace RobotWizard.Controllers
 {
-    public class HomeController : Controller
+    public class GamesController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /Games/
 
         public ActionResult Index()
         {

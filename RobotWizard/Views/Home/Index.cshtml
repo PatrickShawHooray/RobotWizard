@@ -6,11 +6,17 @@
 <div id="top3rd"></div>
 
 <div id="middle3rd">
-   <button class="btnWithImg pBtn" onclick="@("window.location.href='" + @Url.Action("ArrangePlanets", "Arrange") + "'")">
+   <button class="btnWithImg pBtn" onclick="@("window.location.href='" + @Url.Action("Index", "Games") + "'")">
       <img id="games" src="~/Content/buttons/games.png">
    </button>
 </div>
 
-<div id="bottom3rd"></div>
+<div id="bottom3rd">
+   <button class="btnWithImg pBtn" onclick="@("window.location.href='" + @Url.Action("Index", "Music") + "'")">
+      <img id="theBardening" src="~/Content/buttons/theBardening.png">
+   </button>
+</div>
 
-
+<script>
+   $("body").addClass('mainBack');
+</script>

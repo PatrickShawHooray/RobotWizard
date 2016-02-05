@@ -1,4 +1,3 @@
-C:\Development\RobotWizard\RobotWizard\obj\Debug\RobotWizard.csprojResolveAssemblyReference.cache
 C:\Development\RobotWizard\RobotWizard\bin\RobotWizard.dll.config
 C:\Development\RobotWizard\RobotWizard\bin\RobotWizard.dll
 C:\Development\RobotWizard\RobotWizard\bin\RobotWizard.pdb
@@ -24,3 +23,4 @@ C:\Development\RobotWizard\RobotWizard\bin\System.Web.WebPages.Deployment.xml
 C:\Development\RobotWizard\RobotWizard\bin\System.Web.WebPages.Razor.xml
 C:\Development\RobotWizard\RobotWizard\obj\Debug\RobotWizard.dll
 C:\Development\RobotWizard\RobotWizard\obj\Debug\RobotWizard.pdb
+C:\Development\RobotWizard\RobotWizard\obj\Debug\RobotWizard.csprojResolveAssemblyReference.cache

@@ -6,6 +6,19 @@ html, body {
    overflow: hidden;
 }
 
+.mainBack {
+   background: url("/RobotWizard/Content/robots/robowizardMainBackgorundGray.jpg") no-repeat;   
+   background-size: 50%;
+   background-position: 50% 50%;
+}
+.FourOFourBack {
+   background-color: black;
+}
+
+body::after {
+   opacity : 0.5;
+}
+
 #header {
    background-color: #D43F3F;
    width: 100%;
@@ -27,17 +40,28 @@ html, body {
 }
 #middle3rd {
    height: 40%;
-   width: 100%
+   width: 100%;
 }
 #bottom3rd {
    height: 15%;
 }
 
 .btnWithImg {
-    background: white !important;
+    background: transparent;
     border: none !important;
 }
-
+.btnWithImg:hover {
+    background: transparent;
+    border: none !important;
+}
+.btnWithImg:disabled {
+    background: transparent;
+    border: none !important;
+}
+.btnWithImg:disabled:hover {
+    background: transparent;
+    border: none !important;
+}
 .btnWithImg:focus {
     background: white !important;
     border: none !important;
@@ -56,6 +80,12 @@ html, body {
    position: absolute;
    display:none;
    left: 20%;
+}
+
+#roboWizWipeMessage {
+   background-color: white;
+   border: black 6px solid;
+   border-radius: 25px;
 }
 
 #roboWizWin {
@@ -80,3 +110,16 @@ html, body {
 .title h2, h4 {
    text-align: center;
 }
+
+.route #home{
+   bottom:0;
+   position: fixed;
+}
+
+.route #next {
+   bottom:0;
+   position: fixed;
+}
+
+
+

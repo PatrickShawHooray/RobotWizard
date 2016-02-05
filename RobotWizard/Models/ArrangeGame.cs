@@ -15,6 +15,7 @@ namespace RobotWizard.Models
       public string[] winList;
       public string[] failList;
       public string title;
+      public string background;
 
       public ArrangeGame(Dictionary<string, string[]> variables)
       {
@@ -22,6 +23,7 @@ namespace RobotWizard.Models
          failList = System.IO.File.ReadLines("C:\\Development\\RobotWizard\\RobotWizard\\Content\\lists\\fail.txt").ToArray();
          correctOrder = variables["correctOrder"];
          title = String.Join("", variables["title"]);
+         background = @"/RobotWizard/Content/images/backgrounds/" + variables["background"][0];
 
          List<ArrangeObject> objectsList = new List<ArrangeObject>();
 

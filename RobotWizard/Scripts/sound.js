@@ -1,21 +1,4 @@
-﻿var CORRECT_ORDER;
-
-$(document).ready(function () {
-   // set the sun
-   $('body').css('background', 'url(' + background + ')');
-   $('body').css('background-repeat', 'no-repeat');
-   $('body').css('background-position', '0% 20%');
-
-   $('.sortImg').click(function (e) {
-      e.preventDefault();
-   });
-});
-
-var initGame = function () {
-   CORRECT_ORDER = correctOrder;
-}
-
-var soundFX = function (item) {
+﻿var soundFX = function (item) {
    switch (item) {
       case 'planetDrop':
          var sound = document.getElementById('planetDrop');
@@ -38,4 +21,4 @@ var soundFX = function (item) {
          sound.play();
          break;
    }
-} 
+}

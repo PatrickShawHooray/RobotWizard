@@ -4,17 +4,6 @@
    Layout = "~/Views/Shared/MasterLayout.cshtml";
 }
 
-<script type="text/javascript" src="~/Scripts/dom-draggable.js"></script>
-<script src="~/Scripts/Arrange/ArrangeThePlanets.js"></script>
-
-<script>
-   var winResponses = @RobotWizard.JavaScriptConvert.SerializeObject(Model.winList);
-   var failResponses = @RobotWizard.JavaScriptConvert.SerializeObject(Model.failList);
-   var correctOrder = @RobotWizard.JavaScriptConvert.SerializeObject(Model.correctOrder);
-   var background = 'url("/Content/images/sun.gif")';
-   initGame();
-</script>
-
 <div id="top3rd">
    <div class="title">
       <h2>@Model.title</h2><h4>In order from the sun.</h4>
@@ -28,9 +17,9 @@
          @{int count = 0;}
          @foreach (var obj in @Model.objects)
          {
-            string strImgPath = "/Content/images/" + @obj.image;
-            <td class="sortItem" ondrop="drop(event)" ondragover="allowDrop(event)" id=@count>
-               <img id=@obj.name class="sortImg" onclick="suppress()" src=@Url.Content(strImgPath) draggable="true" ondragstart="drag(event)" />
+            string strImgPath = "~/Content/images/" + @obj.image;
+            <td class="sortItem" ondrop="drop(event), soundFX('planetDrop')" ondragover="allowDrop(event)" id=@count>
+               <img id=@obj.name class="sortImg" onclick="" src=@Url.Content(strImgPath) draggable="true" ondragstart="drag(event), soundFX('planetClick')" />
             </td>
             ++count;
          }
@@ -39,5 +28,20 @@
 </div>
 
 <div id="bottom3rd" class="clearfix">
-   <button class="btn btn-primary btn-lg pull-right btnWithImg pBtn" onclick="judgement()"><img id="judge" src="~/Content/buttons/judge.png"></button>
+   <button class="btn btn-primary btn-lg pull-right btnWithImg pBtn" onclick="judgement()"><img id="done" src="~/Content/buttons/done.png"></button>
 </div>
+
+<script type="text/javascript" src="~/Scripts/dom-draggable.js"></script>
+<script src="~/Scripts/Arrange/ArrangeThePlanets.js"></script>
+<audio id="planetDrop" src="~/Content/sounds/plop.ogg" type="audio/ogg" />
+<audio id="planetClick" src="~/Content/sounds/click.ogg" type="audio/ogg" />
+<audio id="wrong" src="~/Content/sounds/wrong.ogg" type="audio/ogg" />
+<audio id="laugh" src="~/Content/sounds/laugh.ogg" type="audio/ogg" />
+<audio id="correct" src="~/Content/sounds/correct.ogg" type="audio/ogg" />
+<script>
+   var winResponses = @RobotWizard.JavaScriptConvert.SerializeObject(Model.winList);
+   var failResponses = @RobotWizard.JavaScriptConvert.SerializeObject(Model.failList);
+   var correctOrder = @RobotWizard.JavaScriptConvert.SerializeObject(Model.correctOrder);
+   var background = @RobotWizard.JavaScriptConvert.SerializeObject(Model.background);
+   initGame();
+</script>
