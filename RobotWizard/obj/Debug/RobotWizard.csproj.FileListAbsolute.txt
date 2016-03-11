@@ -6,6 +6,9 @@ C:\Development\RobotWizard\RobotWizard\bin\EntityFramework.dll
 C:\Development\RobotWizard\RobotWizard\bin\Microsoft.Web.Infrastructure.dll
 C:\Development\RobotWizard\RobotWizard\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
 C:\Development\RobotWizard\RobotWizard\bin\Newtonsoft.Json.dll
+C:\Development\RobotWizard\RobotWizard\bin\System.Net.Http.Formatting.dll
+C:\Development\RobotWizard\RobotWizard\bin\System.Web.Http.dll
+C:\Development\RobotWizard\RobotWizard\bin\System.Web.Http.WebHost.dll
 C:\Development\RobotWizard\RobotWizard\bin\System.Web.Mvc.dll
 C:\Development\RobotWizard\RobotWizard\bin\System.Web.Optimization.dll
 C:\Development\RobotWizard\RobotWizard\bin\System.Web.Providers.dll
@@ -14,8 +17,11 @@ C:\Development\RobotWizard\RobotWizard\bin\System.Web.WebPages.Deployment.dll
 C:\Development\RobotWizard\RobotWizard\bin\System.Web.WebPages.dll
 C:\Development\RobotWizard\RobotWizard\bin\System.Web.WebPages.Razor.dll
 C:\Development\RobotWizard\RobotWizard\bin\WebGrease.dll
-C:\Development\RobotWizard\RobotWizard\bin\EntityFramework.xml
 C:\Development\RobotWizard\RobotWizard\bin\Newtonsoft.Json.xml
+C:\Development\RobotWizard\RobotWizard\bin\System.Net.Http.Formatting.xml
+C:\Development\RobotWizard\RobotWizard\bin\System.Web.Http.xml
+C:\Development\RobotWizard\RobotWizard\bin\System.Web.Http.WebHost.xml
+C:\Development\RobotWizard\RobotWizard\bin\EntityFramework.xml
 C:\Development\RobotWizard\RobotWizard\bin\System.Web.Mvc.xml
 C:\Development\RobotWizard\RobotWizard\bin\System.Web.Razor.xml
 C:\Development\RobotWizard\RobotWizard\bin\System.Web.WebPages.xml

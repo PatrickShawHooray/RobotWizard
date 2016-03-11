@@ -1,5 +1,6 @@
 ﻿@{
    Layout = "~/Views/Shared/MasterLayout.cshtml";
+   ViewBag.Title = "Gamers Gonna Get It";
 }
 
 <div id="top3rd">
@@ -12,10 +13,11 @@
    <div class="row">
       <span class="col-md-1">
          <button class="btnWithImg pBtn" onclick="@("window.location.href='" + @Url.Action("ArrangePlanets", "Arrange") + "'")">
-            <img id="planets" src="~/Content/buttons/planets.png">
+            <img id="planets" class="homeNavBtn" src="~/Content/buttons/planets.png">
          </button>
       </span>
-      <span class="col-md-1"></span>
+      <span class="col-md-1">
+      </span>
       <span class="col-md-1"></span>
       <span class="col-md-1"></span>
       <span class="col-md-1"></span>

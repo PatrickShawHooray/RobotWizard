@@ -1,22 +1,24 @@
 ﻿@{
-   ViewBag.Title = "Index";
-   Layout = "~/Views/Shared/MasterLayout.cshtml";
+    ViewBag.Title = "SplashZone";
+    Layout = "";
 }
+<head>
+    <script src="~/Scripts/notOriginal/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/colorShiftBackground.js"></script>
+    <script src="~/Scripts/buttons.js"></script>
+    <link href="~/Content/styles/Master.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
 
-<div id="top3rd"></div>
+<body id="splashBody">
+    <div id="homeSplashContainer">
+        <img id="splashImage" src="~/Content/robots/homeSpalsh.png" />
 
-<div id="middle3rd">
-   <button class="btnWithImg pBtn" onclick="@("window.location.href='" + @Url.Action("Index", "Games") + "'")">
-      <img id="games" src="~/Content/buttons/games.png">
-   </button>
-</div>
+        <div id="enterWrap">
+            <button class="btn btn-primary btn-lg pull-right btnWithImg pBtn" id="enterSite" onclick="@("window.location.href='" + @Url.Action("Start", "Home") + "'")">
+                <img id="enter" class="dropShadow" src="~/Content/buttons/enter.png">
+            </button>
+        </div>
 
-<div id="bottom3rd">
-   <button class="btnWithImg pBtn" onclick="@("window.location.href='" + @Url.Action("Index", "Music") + "'")">
-      <img id="theBardening" src="~/Content/buttons/theBardening.png">
-   </button>
-</div>
-
-<script>
-   $("body").addClass('mainBack');
-</script>
+    </div>
+</body>

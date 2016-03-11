@@ -20,7 +20,7 @@
       image.src = image.src.substring(0, image.src.lastIndexOf("/") + 1) + imageId + ".png";
    });
    $("#home").on("click", function () {
-      window.location.replace("http://localhost/RobotWizard/");
+      window.location.replace("http://localhost/RobotWizard/Home/Start");
    });
 
 
@@ -134,3 +134,4 @@ var setMessage = function (isCorrect) {
 
    roboWizWipeMessage.innerHTML = message;
 }
+

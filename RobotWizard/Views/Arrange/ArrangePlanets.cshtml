@@ -1,6 +1,7 @@
 ﻿@model RobotWizard.Models.ArrangeGame
 
 @{
+   ViewBag.Title = "Planet-air-e-um?";
    Layout = "~/Views/Shared/MasterLayout.cshtml";
 }
 
@@ -28,16 +29,19 @@
 </div>
 
 <div id="bottom3rd" class="clearfix">
-   <button class="btn btn-primary btn-lg pull-right btnWithImg pBtn" onclick="judgement()"><img id="done" src="~/Content/buttons/done.png"></button>
+   <button class="btn btn-primary btn-lg pull-right btnWithImg pBtn" onclick="judgement()">
+      <img id="done" class="dropShadow" src="~/Content/buttons/done.png">
+   </button>
 </div>
 
 <script type="text/javascript" src="~/Scripts/dom-draggable.js"></script>
 <script src="~/Scripts/Arrange/ArrangeThePlanets.js"></script>
-<audio id="planetDrop" src="~/Content/sounds/plop.ogg" type="audio/ogg" />
-<audio id="planetClick" src="~/Content/sounds/click.ogg" type="audio/ogg" />
-<audio id="wrong" src="~/Content/sounds/wrong.ogg" type="audio/ogg" />
-<audio id="laugh" src="~/Content/sounds/laugh.ogg" type="audio/ogg" />
-<audio id="correct" src="~/Content/sounds/correct.ogg" type="audio/ogg" />
+<audio id="planetDrop" src="../Content/sounds/plop.ogg" type="audio/ogg" ></audio>
+<audio id="planetClick" src="~/Content/sounds/click.ogg" type="audio/ogg"></audio>
+<audio id="wrong" src="~/Content/sounds/wrong.ogg" type="audio/ogg" ></audio>
+<audio id="laugh" src="~/Content/sounds/laugh.ogg" type="audio/ogg" ></audio>
+<audio id="correct" src="~/Content/sounds/correct.ogg" type="audio/ogg"></audio>
+<audio id="correct" src="~/Content/sounds/done.ogg" type="audio/ogg"></audio>
 <script>
    var winResponses = @RobotWizard.JavaScriptConvert.SerializeObject(Model.winList);
    var failResponses = @RobotWizard.JavaScriptConvert.SerializeObject(Model.failList);

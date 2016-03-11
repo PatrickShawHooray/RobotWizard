@@ -5,12 +5,42 @@ html, body {
    width: 100%;
    overflow: hidden;
 }
-
 .mainBack {
-   background: url("/RobotWizard/Content/robots/robowizardMainBackgorundGray.jpg") no-repeat;   
-   background-size: 50%;
+   background: url("http://rbotwizard.com/Content/robots/robowizardMainBackgorundGray.jpg") no-repeat;   
+   background-size: 30%;
    background-position: 50% 50%;
 }
+.backColor1 {
+   border-top: #60f4cc solid 1px;
+   border-left: #60f4cc solid 1px;
+   background-color:#b5f9c6;
+   box-shadow: 2px 2px 2px #404040;
+}
+.backColor2 {
+   background-color:#f6c2c2;
+   border-top: #eab0b0 solid 1px;
+   border-left: #eab0b0 solid 1px;
+   box-shadow: 2px 2px 2px #404040;
+}
+.backColor3 {
+   background-color:#9BEFFF;
+   border-top: #81C8E5 solid 1px;
+   border-left: #81C8E5 solid 1px;
+   box-shadow: 2px 2px 2px #404040;
+}
+.backColor4 {
+   background-color:#DEB9F2;
+   border-top: #E0AFF3 solid 1px;
+   border-left: #E0AFF3 solid 1px;
+   box-shadow: 2px 2px 2px #404040;
+}
+.backColor5 {
+   background-color:#DCD959;
+   border-top: #EDDB54 solid 1px;
+   border-left: #EDDB54 solid 1px;
+   box-shadow: 2px 2px 2px #404040;
+}
+
 .FourOFourBack {
    background-color: black;
 }
@@ -25,10 +55,6 @@ body::after {
    height: 5%;
    display: block;
    box-shadow: 2px 2px 2px #404040;
-}
-
-#header img {
-   width: 25%;
 }
 
 #container {
@@ -46,32 +72,6 @@ body::after {
    height: 15%;
 }
 
-.btnWithImg {
-    background: transparent;
-    border: none !important;
-}
-.btnWithImg:hover {
-    background: transparent;
-    border: none !important;
-}
-.btnWithImg:disabled {
-    background: transparent;
-    border: none !important;
-}
-.btnWithImg:disabled:hover {
-    background: transparent;
-    border: none !important;
-}
-.btnWithImg:focus {
-    background: white !important;
-    border: none !important;
-}
-
-.goImg {
-    background: white !important;
-    border: none !important;
-}
-
 *:focus {
    outline: 0 !important;
 }
@@ -84,14 +84,20 @@ body::after {
 
 #roboWizWipeMessage {
    background-color: white;
-   border: black 6px solid;
+   border: black 4px solid;
    border-radius: 25px;
+   padding: 10px;
 }
 
 #roboWizWin {
    position: absolute;
    display:none;
    left: 20%;
+}
+
+/****** PICTURES ******/
+#robotWizardPic {
+   max-height: 350px;
 }
 
 .sortItem img {
@@ -123,3 +129,91 @@ body::after {
 
 
 
+#siteName {
+   height: 100%;
+}
+
+/* BUTTONS */
+.homeNavBtn {
+   max-height: 125px;
+}
+.btnWithImg {
+    background: transparent;
+    border: none !important;
+}
+.btnWithImg:hover {
+    background: transparent;
+    border: none !important;
+}
+.btnWithImg:disabled {
+    background: transparent;
+    border: none !important;
+}
+.btnWithImg:disabled:hover {
+    background: transparent;
+    border: none !important;
+}
+.btnWithImg:focus {
+    background: white !important;
+    border: none !important;
+}
+.goImg {
+    background: white !important;
+    border: none !important;
+}
+.clickAble {
+   cursor: pointer;
+}
+
+/** table **/
+.tdPad {
+   padding: 10px;
+}
+
+.dropShadow {
+   box-shadow: 2px 2px 2px #404040;
+}
+
+/** home Splash page **/
+#homeSplashContainer {
+    width: 50%;
+    background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    position: relative;
+}
+#splashImage {
+    width: 80%;
+    display: block;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#enterWrap {
+    width: 100%;
+    text-align: center;
+    position:absolute;
+    top: 70%;
+}
+#splashBody {
+    background-color:black;
+}
+
+/*** MUSIC ***/
+pre#lyrics {
+   background-color: #f6c2c2;
+   border-top: #eab0b0 solid 1px;
+   border-left: #eab0b0 solid 1px;
+   box-shadow: 2px 2px 2px #404040;
+}
+pre#credits {
+   text-align: left;
+   background-color: #DEB9F2;
+   border-top: #E0AFF3 solid 1px;
+   border-right: #E0AFF3 solid 1px;
+   box-shadow: -2px 2px 2px #404040;
+}

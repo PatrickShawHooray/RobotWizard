@@ -17,23 +17,32 @@ namespace RobotWizard.Models
       public string title;
       public string background;
 
+
       public ArrangeGame(Dictionary<string, string[]> variables)
       {
-         winList = System.IO.File.ReadLines("C:\\Development\\RobotWizard\\RobotWizard\\Content\\lists\\win.txt").ToArray();
-         failList = System.IO.File.ReadLines("C:\\Development\\RobotWizard\\RobotWizard\\Content\\lists\\fail.txt").ToArray();
-         correctOrder = variables["correctOrder"];
-         title = String.Join("", variables["title"]);
-         background = @"/RobotWizard/Content/images/backgrounds/" + variables["background"][0];
-
-         List<ArrangeObject> objectsList = new List<ArrangeObject>();
-
-         foreach (var obj in variables["objects"])
+         try
          {
-            objectsList.Add(new ArrangeObject(obj.Substring(0, obj.IndexOf(".")), obj));
-         }
+            winList = System.IO.File.ReadLines("C:/Content/lists/win.txt").ToArray();
+            failList = System.IO.File.ReadLines("C:/Content/lists/fail.txt").ToArray();
+            correctOrder = variables["correctOrder"];
+            title = String.Join("", variables["title"]);
+            background = @"http://rbotwizard.com//Content/images/backgrounds/" + variables["background"][0];
 
-         objects = objectsList.ToArray();
-         mixObjectsUp();
+            List<ArrangeObject> objectsList = new List<ArrangeObject>();
+
+            foreach (var obj in variables["objects"])
+            {
+               objectsList.Add(new ArrangeObject(obj.Substring(0, obj.IndexOf(".")), obj));
+            }
+
+            objects = objectsList.ToArray();
+            mixObjectsUp();
+         }
+         catch (Exception e)
+         {
+            string What = e.Message;
+            string when = e.Message;
+         }
       }
 
       private void mixObjectsUp()

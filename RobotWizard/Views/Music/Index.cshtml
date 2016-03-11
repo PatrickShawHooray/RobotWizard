@@ -1,5 +1,5 @@
 ﻿@{
-   ViewBag.Title = "Index";
+   ViewBag.Title = "Music";
    Layout = "~/Views/Shared/MasterLayout.cshtml";
 }
 
@@ -10,13 +10,36 @@
 </div>
 
 <div id="middle3rd">
-
+   <table class="backColor5">
+      <tbody>
+         <tr>
+            <td colspan="3" class="tdPad"><h4 style="text-align:left;">RobotLand</h4></td>
+         </tr>
+         <tr>
+            <td colspan="3" class="tdPad">
+               <audio controls="controls">
+                  <source src="~/Content/music/RobotLand.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+               </audio>
+            </td>
+         </tr>
+         <tr class="trPad">
+            <td class="tdPad" style="text-align:center"><a class="clickAble" onclick="openLyrics('RobotLand')">Lyrics</a></td>
+            <td class="tdPad" style="text-align:center"><a class="clickAble" download="RobotLand.mp3" style="text-align:right" href="~/Content/music/RobotLand.mp3">Download</a></td>
+            <td class="tdPad" style="text-align:center"><a class="clickAble" onclick="openCredits('RobotLand')">Credits</a></td>
+         </tr>
+      </tbody>
+   </table>
 </div>
 
 <div id="bottom3rd">
-
+   <div class="row">
+      <div class="col-md-6" id="lyricsWrap" style="display:none"><pre id="lyrics"></pre></div>
+      <div class="col-md-6" id="creditsWrap" style="display:none;"><div><pre id="credits"></pre></div>
+   </div>
 </div>
 
 <script>
    $("body").addClass('mainBack');
 </script>
+<script src="~/Scripts/MusicHelper.js"></script>
