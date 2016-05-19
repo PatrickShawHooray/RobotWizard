@@ -14,8 +14,11 @@ namespace RobotWizard.Models
       public ArrangeObject[] objects;
       public string[] winList;
       public string[] failList;
+      public string[] additionalInfo;
       public string title;
+      public string instructions;
       public string background;
+      public string nextGame;
 
 
       public ArrangeGame(Dictionary<string, string[]> variables)
@@ -26,7 +29,13 @@ namespace RobotWizard.Models
             failList = System.IO.File.ReadLines("C:/Content/lists/fail.txt").ToArray();
             correctOrder = variables["correctOrder"];
             title = String.Join("", variables["title"]);
-            background = @"http://rbotwizard.com//Content/images/backgrounds/" + variables["background"][0];
+            background = @"../Content/images/backgrounds/" + variables["background"][0];
+            instructions = String.Join("", variables["instructions"]);
+
+            if (variables.ContainsKey("nextGame"))
+            {
+               nextGame = variables["nextGame"][0];
+            }
 
             List<ArrangeObject> objectsList = new List<ArrangeObject>();
 
@@ -35,13 +44,17 @@ namespace RobotWizard.Models
                objectsList.Add(new ArrangeObject(obj.Substring(0, obj.IndexOf(".")), obj));
             }
 
+            if (variables.ContainsKey("additionalInfo"))
+            {
+               additionalInfo = variables["additionalInfo"];
+            }
+
             objects = objectsList.ToArray();
             mixObjectsUp();
          }
          catch (Exception e)
          {
             string What = e.Message;
-            string when = e.Message;
          }
       }
 

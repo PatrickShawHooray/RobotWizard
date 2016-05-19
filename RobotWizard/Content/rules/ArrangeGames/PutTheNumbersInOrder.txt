@@ -1,0 +1,6 @@
+﻿correctOrder=Num1,Num2,Num3,Num4,Num5,Num6,Num7,Num8,Num9,Num10,Num11,Num12,Num13,Num14,Num15,Num16,Num17,Num18,Num19,Num20
+objects=Num1.png,Num2.png,Num3.png,Num4.png,Num5.png,Num6.png,Num7.png,Num8.png,Num9.png,Num10.png,Num11.png,Num12.png,Num13.png,Num14.png,Num15.png,Num16.png,Num17.png,Num18.png,Num19.png,Num20.png
+title=Arrange the Numbers
+instructions=Put the numbers in order.
+background=WebsiteBackGround.png
+nextGame=ArrangeThePlanetsBySize

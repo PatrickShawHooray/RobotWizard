@@ -141,12 +141,52 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\404Message.png" />
+    <Content Include="Content\images\backgrounds\sun.gif" />
+    <Content Include="Content\images\backgrounds\WebsiteBackGround.png" />
+    <Content Include="Content\images\Earth.png" />
+    <Content Include="Content\images\Jupiter.png" />
+    <Content Include="Content\images\Mars.png" />
+    <Content Include="Content\images\mercury.png" />
+    <Content Include="Content\images\neptune.png" />
+    <Content Include="Content\images\no-earth.png" />
+    <Content Include="Content\images\no-jupiter.png" />
+    <Content Include="Content\images\no-mars.png" />
+    <Content Include="Content\images\no-mercury.png" />
+    <Content Include="Content\images\no-neptune.png" />
+    <Content Include="Content\images\no-saturn.png" />
+    <Content Include="Content\images\no-uranus.png" />
+    <Content Include="Content\images\no-venus.png" />
+    <Content Include="Content\images\saturn.png" />
+    <Content Include="Content\images\sun.gif" />
+    <Content Include="Content\images\Uranus.png" />
+    <Content Include="Content\images\Venus.png" />
+    <Content Include="Content\images\yes-earth.png" />
+    <Content Include="Content\images\yes-jupiter.png" />
+    <Content Include="Content\images\yes-mars.png" />
+    <Content Include="Content\images\yes-mercury.png" />
+    <Content Include="Content\images\yes-neptune.png" />
+    <Content Include="Content\images\yes-saturn.png" />
+    <Content Include="Content\images\yes-uranus.png" />
+    <Content Include="Content\images\yes-venus.png" />
     <Content Include="Content\lists\fail.txt" />
     <Content Include="Content\lists\win.txt" />
+    <Content Include="Content\rules\ArrangeGames\ArrangeThePlanets.txt" />
+    <Content Include="Content\rules\ArrangeGames\ArrangeThePlanetsBySize.txt" />
+    <Content Include="Content\rules\ArrangeGames\PutTheNumbersInOrder.txt" />
+    <Content Include="Content\styles\Master.css" />
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\rbotwizard.pubxml" />
+    <Content Include="Views\Arrange\ArrangePlanetsBySize.cshtml" />
+    <Content Include="Views\Arrange\PutTheNumbersInOrder.cshtml" />
     <None Include="Views\Error\FourOFouryoself.cshtml" />
+    <Content Include="Scripts\Arrange\ArrangeThePlanets.js" />
+    <Content Include="Scripts\buttons.js" />
+    <Content Include="Scripts\colorShiftBackground.js" />
+    <Content Include="Scripts\dom-draggable.js" />
     <Content Include="Scripts\MusicHelper.js" />
+    <Content Include="Scripts\notOriginal\bootstrap.min.css" />
+    <Content Include="Scripts\notOriginal\jquery-2.1.4.min.js" />
     <Content Include="Scripts\sound.js" />
     <Content Include="Views\Error\NotFound.aspx" />
     <Content Include="Web.config">
@@ -169,14 +209,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ContentStuff\admin\" />
     <Folder Include="Content\buttons\" />
-    <Folder Include="Content\images\backgrounds\" />
     <Folder Include="Content\images\logos\" />
     <Folder Include="Content\music\" />
     <Folder Include="Content\robots\" />
-    <Folder Include="Content\rules\" />
     <Folder Include="Content\sounds\" />
-    <Folder Include="Content\styles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

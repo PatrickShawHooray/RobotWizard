@@ -7,7 +7,7 @@
 
 <div id="top3rd">
    <div class="title">
-      <h2>@Model.title</h2><h4>In order from the sun.</h4>
+      <h2>@Model.title</h2><h4>@Model.instructions</h4>
    </div>
 </div>
 
@@ -25,7 +25,7 @@
             ++count;
          }
       </tr>
-   </table>
+</table>
 </div>
 
 <div id="bottom3rd" class="clearfix">
@@ -36,7 +36,7 @@
 
 <script type="text/javascript" src="~/Scripts/dom-draggable.js"></script>
 <script src="~/Scripts/Arrange/ArrangeThePlanets.js"></script>
-<audio id="planetDrop" src="../Content/sounds/plop.ogg" type="audio/ogg" ></audio>
+<audio id="planetDrop" src="~/Content/sounds/plop.ogg" type="audio/ogg" ></audio>
 <audio id="planetClick" src="~/Content/sounds/click.ogg" type="audio/ogg"></audio>
 <audio id="wrong" src="~/Content/sounds/wrong.ogg" type="audio/ogg" ></audio>
 <audio id="laugh" src="~/Content/sounds/laugh.ogg" type="audio/ogg" ></audio>
@@ -47,5 +47,6 @@
    var failResponses = @RobotWizard.JavaScriptConvert.SerializeObject(Model.failList);
    var correctOrder = @RobotWizard.JavaScriptConvert.SerializeObject(Model.correctOrder);
    var background = @RobotWizard.JavaScriptConvert.SerializeObject(Model.background);
+   var nextGame = @RobotWizard.JavaScriptConvert.SerializeObject(Model.nextGame);
    initGame();
 </script>

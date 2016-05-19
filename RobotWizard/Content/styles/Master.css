@@ -127,6 +127,10 @@ body::after {
    position: fixed;
 }
 
+.route #retry {
+   bottom:0;
+   position: fixed;
+}
 
 
 #siteName {
@@ -216,4 +220,10 @@ pre#credits {
    border-top: #E0AFF3 solid 1px;
    border-right: #E0AFF3 solid 1px;
    box-shadow: -2px 2px 2px #404040;
+}
+
+.instructionText {
+   font-weight: 500;
+   line-height: 1.1;
+   font-family: Impact, Charcoal, sans-serif;
 }

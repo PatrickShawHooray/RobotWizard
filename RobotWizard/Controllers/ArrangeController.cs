@@ -19,6 +19,21 @@ namespace RobotWizard.Controllers
          return View(game);
       }
 
+      public ActionResult ArrangePlanetsBySize()
+      {
+         var fileContents = System.IO.File.ReadAllText(Server.MapPath(@"~/Content/rules/ArrangeGames/ArrangeThePlanetsBySize.txt"));
+         Dictionary<string, string[]> gameVariables = GlobalCode.ParseArrangeFile(fileContents);
+         ArrangeGame game = new ArrangeGame(gameVariables);
+         return View(game);
+      }
+
+      public ActionResult PutTheNumbersInOrder()
+      {
+         var fileContents = System.IO.File.ReadAllText(Server.MapPath(@"~/Content/rules/ArrangeGames/PutTheNumbersInOrder.txt"));
+         Dictionary<string, string[]> gameVariables = GlobalCode.ParseArrangeFile(fileContents);
+         ArrangeGame game = new ArrangeGame(gameVariables);
+         return View(game);
+      }
 
       public ActionResult Index()
       {
