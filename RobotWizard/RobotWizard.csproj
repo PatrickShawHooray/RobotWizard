@@ -214,6 +214,7 @@
     <Folder Include="Content\images\logos\" />
     <Folder Include="Content\music\" />
     <Folder Include="Content\robots\" />
+    <Folder Include="Content\rules\DropGames\" />
     <Folder Include="Content\sounds\" />
   </ItemGroup>
   <ItemGroup>

@@ -3,32 +3,29 @@
    Layout = "~/Views/Shared/MasterLayout.cshtml";
 }
 
-<div id="top3rd"></div>
-<div id="middle3rd">
-   <div class="row">
-      <div class="col-md-7"></div>
-      <div class="col-md-5">
-         <button class="btnWithImg pBtn" onclick="@("window.location.href='" + @Url.Action("Index", "Games") + "'")">
-            <img id="games2" class="homeNavBtn dropShadow" src="~/Content/buttons/games2.png">
-         </button>
+   <div id="top3rd"></div>
+   <div id="middle3rd">
+      <div class="row">
+         <div class="col-md-9"></div>
+         <div class="col-md-3">
+            <button class="btnWithImg pBtn" onclick="@("window.location.href='" + @Url.Action("Index", "Games") + "'")">
+               <img id="games" class="homeNavBtn" src="~/Content/buttons/games.png">
+            </button>
+         </div>
       </div>
    </div>
 
-   
-</div>
-
-<div id="bottom3rd">
-   <div class="row">
-      <div class="col-md-1">
-         <button class="btnWithImg pBtn" onclick="@("window.location.href='" + @Url.Action("Index", "Music") + "'")">
-            <img id="theBardening2" class="homeNavBtn dropShadow" src="~/Content/buttons/theBardening2.png">
-         </button>
-      </div>
-      <div class="col-md-11">
+   <div id="bottom3rd">
+      <div class="row">
+         <div class="col-md-1">
+            <button class="btnWithImg pBtn" onclick="@("window.location.href='" + @Url.Action("Index", "Music") + "'")">
+               <img id="music" class="homeNavBtn" src="~/Content/buttons/music.png">
+            </button>
+         </div>
+         <div class="col-md-11">
+         </div>
       </div>
    </div>
-</div>
-
 
 
 <script>

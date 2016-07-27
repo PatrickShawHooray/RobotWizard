@@ -5,26 +5,15 @@
    Layout = "~/Views/Shared/MasterLayout.cshtml";
 }
 
-<div id="top3rd">
+<div id="top3rd" class="unSelectable">
    <div class="title">
       <h2>@Model.title</h2><h4>@Model.instructions</h4>
    </div>
 </div>
 
-<div id="middle3rd">
+<div id="middle3rd" class="unSelectable">
    <div class="topBuffer"></div>
-   <table id="table1">
-      <tr class="row">
-         @{int count = 0;}
-         @foreach (var obj in @Model.objects)
-         {
-            string strImgPath = "~/Content/images/" + @obj.image;
-            <td class="sortItem" ondrop="drop(event), soundFX('planetDrop')" ondragover="allowDrop(event)" id=@count style="padding-top:10px">
-               <img id=@obj.name class="sortImg" onclick="" src=@Url.Content(strImgPath) draggable="true" ondragstart="drag(event), soundFX('planetClick')" />
-            </td>
-            ++count;
-         }
-      </tr>
+   <table id="tableInfo" class="fullWidth">
       <tr class="row instructionText">
          <td id="planetInfo0">smallest</td>
          <td id="planetInfo1"></td>
@@ -33,15 +22,27 @@
          <td id="planetInfo4"></td>
          <td id="planetInfo5"></td>
          <td id="planetInfo6"></td>
-         <td id="planetInfo7" style="text-align:right; padding-right:4%">largest</td>
-         <td id="planetStats" style="display:none; width:10%"><br />% size as compared to Earth</td>
+         <td id="planetInfo7" style="text-align:right">largest</td>
+      </tr>
+   </table>
+   <table id="sortTable" class="fullWidth">
+      <tr class="row">
+         @{int count = 0;}
+         @foreach (var obj in @Model.objects)
+         {
+            string strImgPath = "~/Content/images/" + @obj.image;
+            <td class="sortItem" ondrop="drop(event), soundFX('planetDrop')" ondragover="allowDrop(event)" id=@count style="padding-top:10px; max-height:500px; text-align:center">
+               <img id=@obj.name class="sortImg" onclick="" src=@Url.Content(strImgPath) draggable="true" ondragstart="drag(event), soundFX('planetClick')" />
+            </td>
+            ++count;
+         }
       </tr>
    </table>
 </div>
 
-<div id="bottom3rd" class="clearfix">
-   <button class="btn btn-primary btn-lg pull-right btnWithImg pBtn" onclick="judgement(), planetSmallToBig()">
-      <img id="done" class="dropShadow" src="~/Content/buttons/done.png">
+<div id="bottom3rd" class="clearfix unSelectable">
+   <button class="pull-right btnWithImg pBtn" onclick="judgement(), planetSmallToBig()">
+      <img id="done" src="~/Content/buttons/done.png">
    </button>
 </div>
 

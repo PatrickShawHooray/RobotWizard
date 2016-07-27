@@ -1,6 +1,7 @@
 correctOrder=Mercury,Mars,Venus,Earth,Neptune,Uranus,Saturn,Jupiter
 objects=Mercury.png,Mars.png,Venus.png,Earth.png,Neptune.png,Uranus.png,Saturn.png,Jupiter.png
-title=Arrange the Planets: Medium
+title=Arrange the Planets
 instructions=From smallest to largest.
-background=sun.gif
+background=
 additionalInfo=Mercury|38%,Mars|53%,Venus|95%,Earth|100%,Neptune|388%,Uranus|400%,Saturn|945%,Jupiter|1120%
+nextGame=DropMoons

@@ -66,12 +66,12 @@ var planetSmallToBig = function () {
       currentTD.style.paddingRight = "4%";
 
       // change the size of the planet
-      var percentAlter = thisPlanetInfo[1].substr(0, thisPlanetInfo[1].indexOf("%")) / 500;
+      var percentAlter = thisPlanetInfo[1].substr(0, thisPlanetInfo[1].indexOf("%")) / 450;
 
       $(planetImages[i]).width(imgInitWidths[i] * percentAlter);
 
       if (planetImages[i].id == "Saturn") {
-         $(planetImages[i]).width($(planetImages[i]).width() * .79);
+         $(planetImages[i]).width($(planetImages[i]).width() * .89);
       }
    }
 }

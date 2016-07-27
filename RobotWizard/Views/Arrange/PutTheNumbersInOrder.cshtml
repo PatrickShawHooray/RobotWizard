@@ -13,14 +13,14 @@
 
 <div id="middle3rd">
    <div class="topBuffer"></div>
-   <table id="table1">
+   <table id="sortTable">
       <tr class="row">
          @{int count = 0;}
          @foreach (var obj in @Model.objects)
          {
             string strImgPath = "~/Content/images/" + @obj.image;
             <td class="sortItem" ondrop="drop(event), soundFX('planetDrop')" ondragover="allowDrop(event)" id=@count>
-               <img id=@obj.name  class="sortImg" onclick="" src=@Url.Content(strImgPath) draggable="true" ondragstart="drag(event), soundFX('planetClick')" />
+               <img id=@obj.name class="sortImg" onclick="" src=@Url.Content(strImgPath) draggable="true" ondragstart="drag(event), soundFX('planetClick')" />
             </td>
             ++count;
          }
@@ -30,7 +30,7 @@
 
 <div id="bottom3rd" class="clearfix">
    <button class="btn btn-primary btn-lg pull-right btnWithImg pBtn" onclick="judgement()">
-      <img id="done" class="dropShadow" src="~/Content/buttons/done.png">
+      <img id="done" src="~/Content/buttons/done.png">
    </button>
 </div>
 

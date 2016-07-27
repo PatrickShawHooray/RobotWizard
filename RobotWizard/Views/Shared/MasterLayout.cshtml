@@ -11,32 +11,34 @@
 </head>
 <body>
    <div id="header">
-      <a href="@Url.Action("Index","Home")"><img align="right" id="siteName" src="~/Content/images/logos/RoboWizLogo.png"></a>
+      <a href="@Url.Action("Start","Home")"><img align="right" id="siteName" src="~/Content/images/logos/RoboWizLogo.png"></a>
    </div>
    <div class="container">
       @RenderBody()
-   </div>
-   
-   <div id="roboWizWipe">
-      <div class="row">
-         <span class="col-sm-1"></span>
-         <h1 id="roboWizWipeMessage" class="col-sm-8"></h1>
-         <span class="col-sm-1"></span>
+
+      <div id="roboWizWipe" style="display:none">
+         <div class="row">
+            <span class="col-sm-2"></span>
+            <div class="row col-sm-5">
+               <h1 id="roboWizWipeMessage"></h1>
+            </div>
+            <span class="col-sm-5"></span>
+         </div>
+         <div class="row">
+            <div class="row col-sm-8">
+               <img src="~/Content/robots/robowizardWithBubble.png" id="robotWizardPic" />
+            </div>
+            <div id="routeBox" class="col-sm-4">
+               <button id="nextBtn" class="btn btnWithImg pBtn route">
+                  <img id="next" src="~/Content/buttons/next.png">
+               </button>
+               <button id="homeBtn" class="btn btnWithImg pBtn route">
+                  <img id="home" src="~/Content/buttons/home.png">
+               </button>
+            </div>
+         </div>
       </div>
-      <div class="row">
-         <img src="~/Content/robots/robowizardWithBubble.png" id="robotWizardPic" />
-      </div>
-   </div>
-   <div id="routeBox" class="row" style="display:none">
-      <span class="col-sm-3"></span>
-      <button id="nextBtn" class="col-sm-1 btn btn-primary btn-lg btnWithImg pBtn route" onclick="">
-         <img id="next" src="~/Content/buttons/next.png">
-      </button>
-      <span class="col-sm-3"></span>
-      <button id="homeBtn" class="col-sm-1 btn btn-primary btn-lg btnWithImg pBtn route">
-         <img id="home" src="~/Content/buttons/home.png">
-      </button>
-      <span class="col-sm-2"></span>
+
    </div>
 </body>
 </html>

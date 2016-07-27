@@ -1,7 +1,7 @@
 ﻿/* This is not the CSS you're looking for ... move along */
 
 html, body {
-   height: 97%;  
+   height: 100%;  
    width: 100%;
    overflow: hidden;
 }
@@ -57,7 +57,7 @@ body::after {
    box-shadow: 2px 2px 2px #404040;
 }
 
-#container {
+.container {
    height: 80%;
 }
 
@@ -65,10 +65,12 @@ body::after {
    height: 15%;
 }
 #middle3rd {
+   margin-top:20px;
    height: 40%;
    width: 100%;
 }
 #bottom3rd {
+   margin-top:20px;
    height: 15%;
 }
 
@@ -77,9 +79,9 @@ body::after {
 }
 
 #roboWizWipe {
-   position: absolute;
+   /*position: absolute;
    display:none;
-   left: 20%;
+   left: 20%;*/
 }
 
 #roboWizWipeMessage {
@@ -117,6 +119,7 @@ body::after {
    text-align: center;
 }
 
+/*
 .route #home{
    bottom:0;
    position: fixed;
@@ -131,7 +134,7 @@ body::after {
    bottom:0;
    position: fixed;
 }
-
+*/
 
 #siteName {
    height: 100%;
@@ -146,6 +149,10 @@ body::after {
     border: none !important;
 }
 .btnWithImg:hover {
+    background: transparent;
+    border: none !important;
+}
+.btnWithImg:active {
     background: transparent;
     border: none !important;
 }
@@ -172,10 +179,6 @@ body::after {
 /** table **/
 .tdPad {
    padding: 10px;
-}
-
-.dropShadow {
-   box-shadow: 2px 2px 2px #404040;
 }
 
 /** home Splash page **/
@@ -226,4 +229,23 @@ pre#credits {
    font-weight: 500;
    line-height: 1.1;
    font-family: Impact, Charcoal, sans-serif;
+}
+
+.fullWidth {
+   width: 100%;
+}
+
+.unSelectable {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.robotButton {
+   border-style: outset;
+   border-width: 10px;
+   border-color:aqua;
 }

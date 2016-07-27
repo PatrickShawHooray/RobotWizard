@@ -5,15 +5,15 @@
    Layout = "~/Views/Shared/MasterLayout.cshtml";
 }
 
-<div id="top3rd">
+<div id="top3rd" class="unSelectable">
    <div class="title">
       <h2>@Model.title</h2><h4>@Model.instructions</h4>
    </div>
 </div>
 
-<div id="middle3rd">
+<div id="middle3rd" class="unSelectable">
    <div class="topBuffer"></div>
-   <table id="table1">
+   <table id="sortTable">
       <tr class="row">
          @{int count = 0;}
          @foreach (var obj in @Model.objects)
@@ -25,12 +25,12 @@
             ++count;
          }
       </tr>
-</table>
+   </table>
 </div>
 
-<div id="bottom3rd" class="clearfix">
+<div id="bottom3rd" class="clearfix unSelectable">
    <button class="btn btn-primary btn-lg pull-right btnWithImg pBtn" onclick="judgement()">
-      <img id="done" class="dropShadow" src="~/Content/buttons/done.png">
+      <img id="done" src="~/Content/buttons/done.png">
    </button>
 </div>
 

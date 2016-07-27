@@ -32,7 +32,7 @@ function drag(ev) {
 function drop(ev) {
    ev.preventDefault();
    toLocation = ev.target.parentNode.id;
-   var gameTable = document.getElementById("table1");
+   var gameTable = document.getElementById("sortTable");
    var cells = gameTable.rows.item(0).cells;
    var currentTdHTML = cells.item(toLocation).innerHTML;
    
@@ -44,5 +44,5 @@ function drop(ev) {
 }
 
 function getCells() {
-   return document.getElementById("table1").rows.item(0).cells;
+   return document.getElementById("sortTable").rows.item(0).cells;
 }

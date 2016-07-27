@@ -35,8 +35,10 @@ $(document).ready(function () {
          window.location = splitCurrent.join('/');
       }
    });
-});
 
+   $('#roboWizWipe').height($(window).height() - $('#header').height() - $('#top3rd').height() - $('#middle3rd').height() - $('#bottom3rd').height() - 40);
+   $('#robotWizardPic').height($('#roboWizWipe').height() / 1.2);
+});
 
 function judgement() {
    var buttonsToDisalbe = document.getElementsByClassName("pBtn");
@@ -116,17 +118,6 @@ var roboWizWipe = function () {
 
       soundFX('laugh');
       setMessage();
-
-      /* moving from offscreen */
-      //var leftTopPosition = winWidth / 1.5,
-      //   bottomTopPosition = winHeight / 3.9,
-      //   leftBottomPosition = winWidth / 1.7,
-      //   bottomBottomPosition = winHeight / 3.7;
-      //$("#roboWizWipe").animate({      // goin up
-      //   bottom: bottomTopPosition,
-      //   left: leftTopPosition
-      //}, 1300, function () {
-      //});
    } else {
       // green background
       $(document.body).css("background-color", "#e5ffe5");
